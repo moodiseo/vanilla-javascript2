@@ -1,3 +1,5 @@
+const textInput = document.getElementById("text");
+console.log(textInput);
 const fileInput = document.getElementById("file");
 const modeBtn = document.getElementById("mode-btn");
 const destroyBtn = document.getElementById("destroy-btn");
@@ -88,6 +90,11 @@ function onFileChange(event) {
   fileInput.value = null;
 }
 
+function onDoubleClick(event) {
+  console.log(event.offsetX, event.offsetY);
+}
+
+canvas.addEventListener("dblclick", onDoubleClick);
 canvas.addEventListener("mousemove", onMove);
 canvas.addEventListener("mousedown", startPainting);
 canvas.addEventListener("mouseup", cancelPainting);
